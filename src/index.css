@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-gray-700 rounded-md border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 border border-gray-100;
+  }
+
+  .input-field {
+    @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors duration-200;
+  }
+
+  .table-container {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table-header {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+  }
+
+  .status-badge {
+    @apply px-2 py-1 text-xs font-semibold rounded-full inline-flex items-center gap-1;
+  }
+
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .status-progress {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .status-completed {
+    @apply bg-green-100 text-green-800;
+  }
+}
+
+/* DayPicker custom styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #4F46E5;
+  --rdp-background-color: #EEF2FF;
+  margin: 0;
+}
+
+.rdp-day_selected:not([disabled]) { 
+  @apply bg-indigo-600 text-white font-semibold;
+}
+
+.rdp-day_selected:hover:not([disabled]) {
+  @apply bg-indigo-700;
+}
+
+.rdp-day:hover:not([disabled]) {
+  @apply bg-indigo-50;
+}
